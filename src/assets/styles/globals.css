@@ -5066,3 +5066,154 @@
     animation-duration: 2.5s;
   }
 }
+
+
+/* =========================================
+   LABORATORY AREAS CHART — LABGUARDIAN AI
+   ========================================= */
+
+.laboratory-areas-card {
+  min-width: 0;
+}
+
+.laboratory-areas-chart__state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+}
+
+.laboratory-areas-chart__summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  padding: 4px 0 20px;
+}
+
+.laboratory-areas-chart__summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 90px;
+}
+
+.laboratory-areas-chart__summary-label {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.laboratory-areas-chart__summary-value {
+  color: #172033;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.laboratory-areas-chart__summary-value--risk {
+  color: #dc2626;
+}
+
+.laboratory-areas-chart__summary-divider {
+  width: 1px;
+  height: 34px;
+  background: #e2e8f0;
+}
+
+.laboratory-areas-chart__container {
+  width: 100%;
+  height: 280px;
+  min-width: 0;
+}
+
+.laboratory-chart-tooltip {
+  min-width: 190px;
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+.laboratory-chart-tooltip__title {
+  margin: 0 0 10px;
+  color: #172033;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.laboratory-chart-tooltip__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 5px 0;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.laboratory-chart-tooltip__row strong {
+  color: #172033;
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.laboratory-chart-tooltip__row .laboratory-chart-tooltip__risk {
+  color: #dc2626;
+}
+
+.laboratory-areas-chart__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 13px;
+  border-top: 1px solid #eef2f7;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.laboratory-areas-chart__footer-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.laboratory-areas-chart__footer-indicator span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0d9488;
+}
+
+/* Adaptación a pantallas pequeñas */
+
+@media (max-width: 600px) {
+  .laboratory-areas-chart__summary {
+    gap: 12px;
+  }
+
+  .laboratory-areas-chart__summary-item {
+    min-width: 75px;
+  }
+
+  .laboratory-areas-chart__summary-value {
+    font-size: 18px;
+  }
+
+  .laboratory-areas-chart__container {
+    height: 250px;
+  }
+
+  .laboratory-areas-chart__footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
