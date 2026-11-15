@@ -5217,3 +5217,246 @@
     flex-direction: column;
   }
 }
+
+
+
+/* =========================================
+   RECENT ALERTS — LABGUARDIAN AI
+   ========================================= */
+
+.recent-alerts-card {
+  min-width: 0;
+}
+
+.recent-alerts__state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+}
+
+/* Resumen */
+
+.recent-alerts__summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 26px;
+  padding: 3px 0 18px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.recent-alerts__summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.recent-alerts__summary-label {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.recent-alerts__summary-item strong {
+  color: #172033;
+  font-size: 19px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.recent-alerts__summary-item .recent-alerts__active-count {
+  color: #d97706;
+}
+
+.recent-alerts__summary-item .recent-alerts__critical-count {
+  color: #dc2626;
+}
+
+/* Lista */
+
+.recent-alerts__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-alerts__item {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  padding: 17px 0;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.recent-alerts__item:last-child {
+  border-bottom: none;
+}
+
+.recent-alerts__item-indicator {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.recent-alerts__item--low .recent-alerts__item-indicator {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.recent-alerts__item--medium .recent-alerts__item-indicator {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.recent-alerts__item--high .recent-alerts__item-indicator {
+  background: #fff1f2;
+  color: #e11d48;
+}
+
+.recent-alerts__item--critical .recent-alerts__item-indicator {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.recent-alerts__item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.recent-alerts__item-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.recent-alerts__item-title {
+  margin: 0;
+  color: #172033;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.recent-alerts__item-message {
+  display: -webkit-box;
+  margin: 5px 0 9px;
+  overflow: hidden;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Información secundaria */
+
+.recent-alerts__item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.recent-alerts__item-meta > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Botón de detalles */
+
+.recent-alerts__detail-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.recent-alerts__detail-button:hover {
+  color: #1d4ed8;
+}
+
+.recent-alerts__detail-button:focus-visible,
+.recent-alerts__footer-link:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Pie */
+
+.recent-alerts__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 5px;
+  padding-top: 14px;
+  border-top: 1px solid #eef2f7;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.recent-alerts__footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.recent-alerts__footer-link:hover {
+  color: #1d4ed8;
+}
+
+/* Adaptación móvil */
+
+@media (max-width: 600px) {
+  .recent-alerts__summary {
+    gap: 18px;
+  }
+
+  .recent-alerts__item {
+    gap: 9px;
+    padding: 14px 0;
+  }
+
+  .recent-alerts__item-heading {
+    flex-wrap: wrap;
+  }
+
+  .recent-alerts__item-meta {
+    gap: 8px 10px;
+  }
+
+  .recent-alerts__footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
