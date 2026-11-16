@@ -5751,3 +5751,256 @@
     height: 36px;
   }
 }
+
+/* =========================================================
+   RISK DISTRIBUTION CHART
+   ========================================================= */
+
+.risk-distribution-card {
+  height: 100%;
+  min-width: 0;
+}
+
+.risk-distribution__state {
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+.risk-distribution {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.risk-distribution__chart-wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.risk-distribution__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.risk-distribution__center-label {
+  color: var(--text-secondary, #64748b);
+  font-size: 12px;
+}
+
+.risk-distribution__center strong {
+  color: var(--text-primary, #172033);
+  font-size: 30px;
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.risk-distribution__center-caption {
+  color: var(--text-secondary, #64748b);
+  font-size: 11px;
+}
+
+/* Legend */
+
+.risk-distribution__legend {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.risk-distribution__legend-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.risk-distribution__legend-item:not(:disabled) {
+  cursor: pointer;
+}
+
+.risk-distribution__legend-item:not(:disabled):hover {
+  background: var(--surface-secondary, #f8fafc);
+}
+
+.risk-distribution__legend-item:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+.risk-distribution__legend-item:disabled {
+  opacity: 1;
+}
+
+.risk-distribution__legend-dot {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.risk-distribution__legend-label {
+  flex: 1;
+  color: var(--text-secondary, #64748b);
+  font-size: 13px;
+}
+
+.risk-distribution__legend-count {
+  min-width: 24px;
+  color: var(--text-primary, #172033);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.risk-distribution__legend-percentage {
+  min-width: 48px;
+  color: var(--text-secondary, #64748b);
+  font-size: 12px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tooltip */
+
+.risk-distribution__tooltip {
+  min-width: 150px;
+  padding: 12px 14px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.10);
+}
+
+.risk-distribution__tooltip-heading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #172033;
+  font-size: 12px;
+}
+
+.risk-distribution__tooltip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.risk-distribution__tooltip-value {
+  margin-top: 8px;
+  color: #172033;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.risk-distribution__tooltip-value span {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.risk-distribution__tooltip-percentage {
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+/* Insights */
+
+.risk-distribution__insights {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-color, #e8edf3);
+}
+
+.risk-distribution__insight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.risk-distribution__insight-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+}
+
+.risk-distribution__insight-icon--warning {
+  color: #d97706;
+  background: #fffbeb;
+}
+
+.risk-distribution__insight-icon--danger {
+  color: #dc2626;
+  background: #fef2f2;
+}
+
+.risk-distribution__insight-icon--success {
+  color: #16a34a;
+  background: #f0fdf4;
+}
+
+.risk-distribution__insight > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.risk-distribution__insight-label {
+  color: var(--text-secondary, #64748b);
+  font-size: 11px;
+}
+
+.risk-distribution__insight strong {
+  color: var(--text-primary, #172033);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .risk-distribution__legend-item {
+    gap: 7px;
+    padding: 8px 5px;
+  }
+
+  .risk-distribution__legend-label {
+    font-size: 12px;
+  }
+
+  .risk-distribution__center strong {
+    font-size: 25px;
+  }
+
+  .risk-distribution__insight-label {
+    font-size: 10px;
+  }
+}
