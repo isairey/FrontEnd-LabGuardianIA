@@ -6200,3 +6200,340 @@
     max-width: 100%;
   }
 }
+
+
+/* =========================================================
+   EQUIPMENT TABLE
+   ========================================================= */
+
+.equipment-table-card {
+  min-width: 0;
+  width: 100%;
+}
+
+.equipment-table {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.equipment-table__header-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.equipment-table__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.equipment-table__search {
+  flex: 1;
+  min-width: 220px;
+  max-width: 460px;
+}
+
+.equipment-table__filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary, #64748b);
+}
+
+.equipment-table__status-filter {
+  min-width: 170px;
+  height: 38px;
+  padding: 0 32px 0 11px;
+  color: var(--text-primary, #172033);
+  background-color: #ffffff;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 9px;
+  font: inherit;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+
+.equipment-table__status-filter:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.10);
+}
+
+.equipment-table__results {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--text-secondary, #64748b);
+  font-size: 12px;
+}
+
+.equipment-table__clear {
+  padding: 4px 0;
+  color: #2563eb;
+  background: transparent;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.equipment-table__clear:hover {
+  text-decoration: underline;
+}
+
+/* Table */
+
+.equipment-table__scroll {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border-color, #e8edf3);
+  border-radius: 11px;
+}
+
+.equipment-table__table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.equipment-table__table thead {
+  background: var(--surface-secondary, #f8fafc);
+}
+
+.equipment-table__table th {
+  padding: 13px 15px;
+  color: var(--text-secondary, #64748b);
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border-color, #e8edf3);
+}
+
+.equipment-table__table td {
+  padding: 14px 15px;
+  border-bottom: 1px solid var(--border-color, #edf0f4);
+  vertical-align: middle;
+}
+
+.equipment-table__table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.equipment-table__table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.equipment-table__table tbody tr:hover {
+  background: var(--surface-secondary, #f8fafc);
+}
+
+/* Equipment identity */
+
+.equipment-table__equipment {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 190px;
+}
+
+.equipment-table__equipment-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+}
+
+.equipment-table__equipment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.equipment-table__equipment-info strong {
+  color: var(--text-primary, #172033);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.equipment-table__equipment-info span {
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.equipment-table__equipment-info small {
+  color: var(--text-tertiary, #94a3b8);
+  font-size: 10px;
+}
+
+/* Location */
+
+.equipment-table__location {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 135px;
+}
+
+.equipment-table__location > span {
+  color: var(--text-primary, #334155);
+  font-size: 12px;
+  font-weight: 550;
+}
+
+.equipment-table__location small {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-secondary, #94a3b8);
+  font-size: 10px;
+}
+
+/* Calibration */
+
+.equipment-table__calibration {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  min-width: 135px;
+}
+
+.equipment-table__calibration > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary, #64748b);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* Actions */
+
+.equipment-table__actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.equipment-table__action {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.equipment-table__action:hover {
+  color: #2563eb;
+  background: #eff6ff;
+  border-color: #dbeafe;
+}
+
+.equipment-table__action--danger:hover {
+  color: #dc2626;
+  background: #fef2f2;
+  border-color: #fee2e2;
+}
+
+.equipment-table__action:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* Loading and empty states */
+
+.equipment-table__state {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+/* Pagination */
+
+.equipment-table__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.equipment-table__pagination-info {
+  color: var(--text-secondary, #64748b);
+  font-size: 11px;
+}
+
+.equipment-table__pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.equipment-table__page-number {
+  min-width: 42px;
+  color: var(--text-secondary, #64748b);
+  font-size: 11px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+  .equipment-table__toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .equipment-table__search {
+    max-width: none;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .equipment-table__filters,
+  .equipment-table__status-filter {
+    width: 100%;
+  }
+
+  .equipment-table__pagination {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .equipment-table__pagination-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .equipment-table__header-actions {
+    width: 100%;
+  }
+}
