@@ -6169,3 +6169,34 @@
     font-size: 26px;
   }
 }
+
+
+/* =========================================================
+   EQUIPMENT STATUS BADGE
+   ========================================================= */
+
+.equipment-status-badge {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.equipment-status-badge svg {
+  flex-shrink: 0;
+}
+
+/* Accessibility */
+
+.equipment-status-badge:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .equipment-status-badge {
+    max-width: 100%;
+  }
+}
