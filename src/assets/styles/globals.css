@@ -7213,3 +7213,158 @@
   background: #f8fafc;
   border-color: #e2e8f0;
 }
+
+
+
+
+
+
+
+
+/* =========================================
+   SAMPLE STATUS BADGE
+========================================= */
+
+.sample-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  font-family: inherit;
+  font-weight: 650;
+  white-space: nowrap;
+  vertical-align: middle;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Sizes */
+
+.sample-status-badge--sm {
+  min-height: 22px;
+  padding: 3px 7px;
+  font-size: 10px;
+}
+
+.sample-status-badge--md {
+  min-height: 26px;
+  padding: 4px 9px;
+  font-size: 11px;
+}
+
+.sample-status-badge--lg {
+  min-height: 30px;
+  padding: 5px 11px;
+  font-size: 12px;
+}
+
+/* Icon */
+
+.sample-status-badge__icon {
+  flex-shrink: 0;
+}
+
+.sample-status-badge__icon--animated {
+  animation: sample-status-spin 1.8s linear infinite;
+}
+
+@keyframes sample-status-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dot */
+
+.sample-status-badge__dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+/* Label */
+
+.sample-status-badge__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Pending */
+
+.sample-status-badge--pending {
+  color: #a16207;
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+/* Received */
+
+.sample-status-badge--received {
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+/* Processing */
+
+.sample-status-badge--processing {
+  color: #6d28d9;
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+}
+
+/* Completed */
+
+.sample-status-badge--completed {
+  color: #15803d;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+/* Rejected */
+
+.sample-status-badge--rejected {
+  color: #b91c1c;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+/* Cancelled */
+
+.sample-status-badge--cancelled {
+  color: #64748b;
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+/* In transit */
+
+.sample-status-badge--transit {
+  color: #0f766e;
+  background: #f0fdfa;
+  border-color: #99f6e4;
+}
+
+/* Stored */
+
+.sample-status-badge--stored {
+  color: #475569;
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+/* Unknown */
+
+.sample-status-badge--unknown {
+  color: #64748b;
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
