@@ -9590,3 +9590,251 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+
+
+/* src/pages/equipment.css */
+
+.equipment-page {
+  width: 100%;
+  min-width: 0;
+}
+
+.equipment-page__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.equipment-page__header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.equipment-page__stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.equipment-page__stat-card {
+  min-width: 0;
+}
+
+.equipment-page__stat {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+}
+
+.equipment-page__stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+}
+
+.equipment-page__stat-icon--primary {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.equipment-page__stat-icon--success {
+  color: #059669;
+  background: #ecfdf5;
+}
+
+.equipment-page__stat-icon--warning {
+  color: #d97706;
+  background: #fffbeb;
+}
+
+.equipment-page__stat-icon--danger {
+  color: #dc2626;
+  background: #fef2f2;
+}
+
+.equipment-page__stat-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 3px;
+}
+
+.equipment-page__stat-label {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.equipment-page__stat-value {
+  color: #172033;
+  font-size: 25px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.equipment-page__stat-description {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.equipment-page__notice {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 18px;
+  border: 1px solid #fde68a;
+  border-radius: 12px;
+  background: #fffbeb;
+}
+
+.equipment-page__notice-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  color: #b45309;
+  background: #fef3c7;
+}
+
+.equipment-page__notice-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.equipment-page__notice-content strong {
+  color: #92400e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.equipment-page__notice-content span {
+  color: #a16207;
+  font-size: 12px;
+}
+
+.equipment-page__table-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.equipment-page__loading,
+.equipment-page__empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  padding: 35px 20px;
+}
+
+.equipment-page__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 4px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.equipment-page__footer-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.equipment-page__footer-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 3px #d1fae5;
+}
+
+.equipment-page__delete-status {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 100;
+  padding: 14px 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgb(15 23 42 / 10%);
+}
+
+@media (max-width: 1100px) {
+  .equipment-page__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .equipment-page__content {
+    gap: 18px;
+  }
+
+  .equipment-page__header-actions {
+    width: 100%;
+  }
+
+  .equipment-page__header-actions > * {
+    flex: 1;
+  }
+
+  .equipment-page__stats {
+    gap: 10px;
+  }
+
+  .equipment-page__stat {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .equipment-page__stat-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .equipment-page__stat-value {
+    font-size: 21px;
+  }
+
+  .equipment-page__stat-description {
+    font-size: 10px;
+  }
+
+  .equipment-page__notice {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 13px;
+  }
+
+  .equipment-page__footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .equipment-page__stats {
+    grid-template-columns: 1fr;
+  }
+}
+

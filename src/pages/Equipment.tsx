@@ -28,7 +28,7 @@ import EquipmentTable, {
 
 import { useEquipment } from "../hooks/useEquipment";
 
-import "./equipment.css";
+
 
 export default function Equipment() {
   const navigate = useNavigate();
