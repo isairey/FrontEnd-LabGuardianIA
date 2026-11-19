@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 
-import type { AlertDetailData } from "../components/alerts/AlertDetail";
+import type { AlertDetailData } from "../components/alerts/AlertDetails";
 import type { RecentSampleData } from "../components/dashboard/RecentSamples";
 import type { LaboratoryAreaData } from "../components/dashboard/LaboratoryAreasChart";
 import type { RiskDistributionData } from "../components/dashboard/RiskDistributionChart";
