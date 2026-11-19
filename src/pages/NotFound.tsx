@@ -11,7 +11,6 @@ import {
 
 import Button from "../components/common/Button";
 
-import "./not-found.css";
 
 export default function NotFound() {
   const navigate = useNavigate();
